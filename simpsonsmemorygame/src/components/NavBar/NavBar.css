@@ -1,8 +1,5 @@
 nav.navbar {
   width: 100%;
-  background-image: url(https://vignette.wikia.nocookie.net/simpsons/images/b/b7/Simspons_Clouds.jpg/revision/latest?cb=20100824223324);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
   margin: 0;
 }
 div.panel.panel-primary {

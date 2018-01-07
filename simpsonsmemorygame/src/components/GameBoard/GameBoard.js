@@ -1,5 +1,8 @@
 import React from "react";
-import CharacterCard from "../CharacterCard";
+import NavBar from "../NavBar";
+import Score from "../Score";
+import HighScore from "../HighScore";
+
 
 // By extending the React.Component class, Counter inherits functionality from it
 class GameBoard extends React.Component {
@@ -38,7 +41,13 @@ class GameBoard extends React.Component {
   // The render method returns the JSX that should be rendered
   render() {
     return (
-        <p></p>
+      <div>
+      <NavBar />
+      <div className="text-right">
+        <Score>Score: {this.state.count}</Score>
+        <HighScore>High Score: {this.state.highscore} </HighScore>
+      </div>
+    </div>
     );
   }
 }

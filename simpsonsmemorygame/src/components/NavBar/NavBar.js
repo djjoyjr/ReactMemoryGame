@@ -9,15 +9,8 @@ import Subtitle from "../Subtitle";
 
 const NavBar = props => (
   <nav className="navbar">
-    <div className="navbar-brand">
-      <h2>Reacty Clicky-Memory Game</h2>
-      <div className="panel-body text-right">
-        <p>Score: {props.count}</p>
-        <p>High Score:</p>
-      </div>
       <Title>SIMPSONS MEMORY GAME</Title>
       <Subtitle>CLICK ON AN IMAGE TO EARN A POINT, BUT DON'T CLICK ON ANY IMAGE MORE THAN ONCE!!!</Subtitle>
-    </div>
   </nav>
 );
 

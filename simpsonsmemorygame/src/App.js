@@ -3,7 +3,6 @@ import CharacterCard from "./components/CharacterCard";
 import Wrapper from "./components/Wrapper";
 import characters from "./characters.json";
 import GameBoard from "./components/GameBoard";
-import NavBar from "./components/NavBar";
 
 class App extends Component {
   // Setting this.state.characters to the characters json array
@@ -14,8 +13,6 @@ class App extends Component {
   // Map over this.state.character and render a CharacterCard component for each character object
   render() {
     return (
-      <div>
-        <NavBar />
         <Wrapper>
           <GameBoard />
           {this.state.characters.map(character => (
@@ -27,7 +24,6 @@ class App extends Component {
             />
           ))}
         </Wrapper>
-    </div>
     );
   }
 }
