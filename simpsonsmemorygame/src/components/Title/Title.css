@@ -1,0 +1,9 @@
+h1.title {
+  font-family: 'Gloria Hallelujah', cursive;
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+  color: Yellow;
+  text-shadow: 3px 3px black;
+  margin-bottom: 10px;
+}
