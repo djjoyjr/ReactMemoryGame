@@ -10,6 +10,7 @@ class GameBoard extends React.Component {
   state = {
     score: 0,
     highscore: 0,
+    message: "Click on any image to begin.",
     characters
   };
 
@@ -24,31 +25,26 @@ class GameBoard extends React.Component {
     }
   }
 
-  handleCardClick = () => {
-    console.log("You just clicked" + this.state.characters);
+  handleCardClick = (index) => {
 
-    this.setState({ score: this.state.score + 1 });
+    let clickStatus = this.state.characters[index];
 
+    if (clickStatus.clicked===false) {
+      this.setState({ score: this.state.score + 1 });
+      this.setState({ message: "Aye Caramba! Great Guess."});
+      clickStatus.clicked = true;
+    }
+    else {
+      this.setState({ message: "DOH! You already clicked that one. Click any image to play again."});
+      this.setState({score: 0});
+      for (var i = 0; i < characters.length; i++) {
+        characters[i].clicked=false;
+      }
+    }
     if (this.state.highscore <= this.state.score) {
       this.setState({ highscore: this.state.highscore +1});
     }
-
   this.shuffleArray(characters);
-
-
-    // Get the data-value of the clicked button
-    // const pickedYet = event.target.attributes.getNamedItem("data-value").value;
-    // Clone this.state to the newState object
-    // We'll modify this object and use it to set our component's state
-    // const newState = { ...this.state };
-
-    // if (pickedYet === "picked") {
-    //   // restart game
-    //
-    // } else {
-    //   // Increment score by +1
-    // }
-    // Replace our component's state with newState, load the next dog image
   };
 
 
@@ -59,14 +55,16 @@ class GameBoard extends React.Component {
       <NavBar
         count={this.state.score}
         highscore={this.state.highscore}
+        message={this.state.message}
       />
 
-      {this.state.characters.map(character => (
+    {this.state.characters.map((character, i) => (
         <CharacterCard
           id={character.id}
           key={character.id}
           name={character.name}
           image={character.image}
+          index={i}
           handleCardClick={this.handleCardClick}
         />
       ))}
