@@ -2,9 +2,9 @@ import React from "react";
 import "./CharacterCard.css";
 
 const CharacterCard = props => (
-  <div className="card">
+  <div className={`card ${props["data-value"]}`}  onClick={props.handleCardClick}>
     <div className="img-container">
-      <img alt={props.name} src={props.image} onClick={props.handleIncrement}
+      <img alt={props.name} src={props.image}
       />
     </div>
     <div className="content">
