@@ -9,5 +9,4 @@ The application should render images of different Simpsons characters to the scr
 Each time an image is clicked, the images rendered to the page should shuffle themselves in a random order. Once the user's score is reset after an incorrect guess, the game should restart.
 
 Here's a screenshot of what the application looks like:  
-![Image of Simpson Reacty Memory Clicky Game]
-(https://raw.githubusercontent.com/djjoyjr/ReactMemoryGame/master/Screen%20Shot%20of%20Simpsons%20Clicky%20Game.png)
+![Image of Simpson Reacty Memory Clicky Game](https://raw.githubusercontent.com/djjoyjr/ReactMemoryGame/master/Screen%20Shot%20of%20Simpsons%20Clicky%20Game.png)
